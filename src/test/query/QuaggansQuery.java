@@ -16,7 +16,7 @@ import static test.query.QueryUtils.*;
 public enum QuaggansQuery {
 
     INSTANCE;
-    
+
     /**
      * L'URL de base de cet endpoint.
      */
