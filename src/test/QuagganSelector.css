@@ -1,0 +1,18 @@
+.root-pane {
+    -fx-background-color: white;
+    -fx-background-image: url("corner.png");
+    -fx-background-position: top left;
+    -fx-background-repeat: no-repeat;
+    -fx-padding: 70px 50px 50px 50px;
+    -fx-spacing: 10px;
+    -fx-font-family: serif;
+}
+.main-text {
+    -fx-font-size: 3.0em;        
+}
+.combo-box {
+    -fx-font-size: 1.4em;   
+    -fx-background-color: black, white;
+    -fx-background-insets: 0px, 1px;
+    -fx-background-radius: 0px;
+}
