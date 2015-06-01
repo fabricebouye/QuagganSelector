@@ -20,7 +20,7 @@ public enum QuaggansQuery {
     /**
      * L'URL de base de cet endpoint.
      */
-    private static final String basecode = "https://api.guildwars2.com/v2/quaggans"; // NOI18N.
+    private static final String BASECODE = "https://api.guildwars2.com/v2/quaggans"; // NOI18N.
 
     /*
      * Récupère la liste de tous les identifiants des images de Quaggans.
@@ -28,7 +28,7 @@ public enum QuaggansQuery {
      * @throws IOException En cas d'erreur.
      */
     public static List<String> list() throws Exception {
-        final JsonArray array = queryArray(basecode);
+        final JsonArray array = queryArray(BASECODE);
         // On transforme le JsonArray<JsonString> en List<String>.
         final List<String> values = array.getValuesAs(JsonString.class)
                 .stream()
@@ -43,7 +43,7 @@ public enum QuaggansQuery {
      * @throws IOException En cas d'erreur.
      */
     public static String imageURLForId(final String quaggan) throws Exception {
-        final JsonObject object = queryObject(basecode + "/" + quaggan); // NOI18N.
+        final JsonObject object = queryObject(BASECODE + "/" + quaggan); // NOI18N.
         final JsonString url = object.getJsonString("url"); // NOI18N.
         return url.getString();
     }
